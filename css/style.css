@@ -13,7 +13,6 @@ h1 {
 main {
   margin: 5%;
   display: grid;
-
   grid-gap: 1rem;
 }
 .item {
@@ -28,4 +27,16 @@ a {
 a:hover {
   background-color: #ff7f50;
   font-weight: 600;
+}
+
+a.tickets {
+  text-align: center;
+  padding: 2em;
+  background-color: #ff7f50;
+}
+
+div {
+  display: grid;
+  justify-items: space-between;
+  margin-bottom: 5%;
 }
