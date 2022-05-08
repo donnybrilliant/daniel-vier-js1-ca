@@ -1,4 +1,5 @@
-const container = document.querySelector("main");
+import { renderEvent } from "./renderEvent.js";
+import { renderError } from "./renderError.js";
 
 const apiKey = "LBY1JKNzQTx6Cl12s9d8wAEp4ro2dH80";
 
@@ -12,18 +13,9 @@ async function fetchEvent() {
   try {
     const response = await fetch(url);
     const event = await response.json();
-    container.innerHTML = "";
-    console.log(event);
-    const date = event.dates.start.localDate;
-    const [year, month, day] = date.split("-");
-    const formattedDate = [month, day, year].join("/");
-    container.innerHTML += `<div class="event">
-      <h1>${event.name}</h1>
-      <p>${formattedDate}</p>
-      <img src="${event.images[2].url}">
-      <div class="details">
-      <a href="${event.url}" target="_blank" class="tickets">Billetter</a></div></div>`;
+    renderEvent(event);
   } catch (error) {
+    renderError();
     console.log(error);
   }
 }
