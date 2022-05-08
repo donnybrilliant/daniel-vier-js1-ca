@@ -75,6 +75,42 @@ a.tickets {
   width: 50%;
 }
 
+.success {
+  background-color: aquamarine;
+}
+
 .error {
   background-color: #ff5c50;
+}
+
+label {
+  display: block;
+  margin: 2%;
+}
+
+input {
+  width: 100%;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+button {
+  background-color: #ff7f50;
+  border: none;
+  width: 200px;
+  padding: 3%;
+  cursor: pointer;
+  margin: 2%;
+}
+
+button:hover {
+  font-weight: 600;
+}
+
+.form-error {
+  background-color: #ff5c50;
+  display: none;
 }
