@@ -7,7 +7,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const eventId = params.get("id");
 
-const url = `https://app.ticketaster.com/discovery/v2/events/${eventId}?apikey=${apiKey}&locale=*`;
+const url = `https://app.ticketmaster.com/discovery/v2/events/${eventId}?apikey=${apiKey}&locale=*`;
 
 async function fetchEvent() {
   try {
