@@ -1,4 +1,4 @@
-import { formatDate } from "./formatDate.js";
+import { formatDate } from "../functions/formatDate.js";
 
 export function renderEvent(event) {
   const container = document.querySelector("main");
